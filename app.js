@@ -6,6 +6,8 @@ new Vue({
         website: 'https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-e9a1ae8077fd',
         websiteTag: '<a href="https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-e9a1ae8077fd">a link</a>',
         number: 0,
+        x: 0,
+        y: 0,
     },
 
     methods: {
@@ -20,7 +22,12 @@ new Vue({
         decreaseNumber: function(down){
             this.number = this.number - down;
         },
-           
+        
+        updateXY: function(event){
+            console.log(event);
+            this.x = event.offsetX,
+            this.y = event.offsetY
+        }
         
     }
 

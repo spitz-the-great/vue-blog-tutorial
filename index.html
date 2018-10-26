@@ -21,14 +21,16 @@
         <p v-html="websiteTag"></p>
 
         <p>Current number: {{ number }}</p>
+        <!-- @ is shorthand for v-on:   ex: @click="increaseNumber(1)" -->
         <button v-on:click="increaseNumber(1)">Add number</button>
         <button v-on:click="decreaseNumber(1)">Subtract number</button>
 
         <button v-on:dblclick="increaseNumber(10)">Add 10</button>
         <button v-on:dblclick="decreaseNumber(10) ">Subtract 10</button>
 
-        <div id="canvas">
-            
+        <!-- for updateXY the event is implicitly passed, dont need to do: updateXY(event) -->
+        <div id="canvas" v-on:mousemove="updateXY">
+            {{ x }}, {{ y }}
         </div>
 
     </div>
