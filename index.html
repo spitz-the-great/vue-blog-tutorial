@@ -38,19 +38,29 @@
         <a v-on:click.prevent="click" href="http://www.google.com">google link</a>
 
 
-        <h1>key event example section</h1>
+        <h1>key event and two-way binding example section</h1>
+            <label>name: </label>
+            <input type="text" v-on:keyup.enter="logName" v-model="nameInput">
+            <span>{{ nameInput }}</span>
+            <!-- can chain modifiers, ex: .alt.enter will only fire when user hits alt+enter together -->
 
-        <label>name: </label>
-        <input type="text" v-on:keyup.enter="logName" v-model="nameInput">
-        <span>{{ nameInput }}</span>
-        <!-- can chain modifiers, ex: .alt.enter will only fire when user hits alt+enter together -->
-        
-        <label>age: </label>
-        <!-- v-model is the Vue two way binding directive,
-         a change to ageInput here will update data.ageInput on app.js -->
-        <input type="text" v-on:keyup.enter="logAge" v-model="ageInput">
-        <span>{{ ageInput }}</span>
+            <label>age: </label>
+            <!-- v-model is the Vue two way binding directive,
+            a change to ageInput here will update data.ageInput on app.js -->
+            <input type="text" v-on:keyup.enter="logAge" v-model="ageInput">
+            <span>{{ ageInput }}</span>
 
+
+        <h1>computed properties example section</h1>
+            <button v-on:click="a++">add to a</button>
+            <button v-on:click="b++">add to b</button>
+
+            <p>A - {{ a }}</p>
+            <p>B - {{ b }}</p>
+
+            <p>age + a = {{ addToA }}</p>
+            <p>age + b = {{ addToB }}</p>
+            
     </div>
     <script src=" app.js "></script>
 </body>
