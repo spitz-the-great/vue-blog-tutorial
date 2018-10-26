@@ -32,9 +32,22 @@
         <div id="canvas" v-on:mousemove="updateXY">
             {{ x }}, {{ y }}
         </div>
+        <!-- .prevent is an event modifier, function "click" will still run but .prevent 
+        blocks the default behavior of the event 
+        replaces event.preventDefault() -->
+        <a v-on:click.prevent="click" href="http://www.google.com">google link</a>
+
+
+        <h1>key event example section</h1>
+
+        <label>name: </label>
+        <input type="text" v-on:keyup.enter="logName">
+            <!-- can chain modifiers, ex: .alt.enter will only fire when user hits alt+enter together -->
+        <label>age: </label>
+        <input type="text" v-on:keyup.enter="logAge">
 
     </div>
-    <script src="app.js"></script>
+    <script src=" app.js "></script>
 </body>
 
 </html>

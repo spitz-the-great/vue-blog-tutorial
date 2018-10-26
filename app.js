@@ -27,6 +27,16 @@ new Vue({
             console.log(event);
             this.x = event.offsetX,
             this.y = event.offsetY
+        },
+        click: function(){
+            alert( 'YOU TRYNA LEAVE MY SITE?!?!?!?!!' )
+        },
+
+        logName: function(){
+            console.log('name');
+        },
+        logAge: function(){
+            console.log('age');
         }
         
     }
