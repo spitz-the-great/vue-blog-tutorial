@@ -9,3 +9,17 @@ body{
     text-align: center;
     border: 2px solid black;
 }
+
+span{
+    background-color: red;
+}
+
+.available span{
+    background: green;
+}
+
+.nearby span:after{
+
+    content: "nearby";
+    margin-left: 10px;
+}

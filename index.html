@@ -46,7 +46,7 @@
 
             <label>age: </label>
             <!-- v-model is the Vue two way binding directive,
-            a change to ageInput here will update data.ageInput on app.js -->
+                a change to ageInput here will update data.ageInput on app.js -->
             <input type="text" v-on:keyup.enter="logAge" v-model="ageInput">
             <span>{{ ageInput }}</span>
 
@@ -60,7 +60,23 @@
 
             <p>age + a = {{ addToA }}</p>
             <p>age + b = {{ addToB }}</p>
-            
+
+        <h1> dynamic css example section</h1>
+        <!-- <h2>example 1</h2>
+        <div v-on:click="available = !available" v-bind:class="{available: available}">
+                <span> the example 1 example</span>
+        </div> -->
+
+        <h2>example 2</h2>
+        <div v-bind:class="compClasses" >
+            <button v-on:click="nearby = !nearby">toggle nearby </button> 
+            <button v-on:click="available = !available">toggle available</button>
+           
+            <span> the example 2 example</span>
+        </div>
+
+
+
     </div>
     <script src=" app.js "></script>
 </body>

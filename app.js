@@ -8,11 +8,15 @@ new Vue({
         number: 0,
         x: 0,
         y: 0,
+        // two way binding
         nameInput: '',
         ageInput: '',
         a: 0,
         b: 0,
         age: 20,
+        // dynamic css
+        available: false,
+        nearby: false,
     },
 
     methods: {
@@ -62,6 +66,13 @@ new Vue({
             addToB: function(){
                 console.log('add to age');
                 return this.age + this.b
+            },
+
+            compClasses: function(){
+                return {
+                     available: this.available,
+                     nearby: this.nearby 
+                }
             }
         }
         
