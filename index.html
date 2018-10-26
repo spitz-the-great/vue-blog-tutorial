@@ -20,6 +20,17 @@
         <input type="text" v-bind:value="name">
         <p v-html="websiteTag"></p>
 
+        <p>Current number: {{ number }}</p>
+        <button v-on:click="increaseNumber(1)">Add number</button>
+        <button v-on:click="decreaseNumber(1)">Subtract number</button>
+
+        <button v-on:dblclick="increaseNumber(10)">Add 10</button>
+        <button v-on:dblclick="decreaseNumber(10) ">Subtract 10</button>
+
+        <div id="canvas">
+            
+        </div>
+
     </div>
     <script src="app.js"></script>
 </body>

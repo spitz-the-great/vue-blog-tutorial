@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+}
+
+#canvas{
+    width: 600px;
+    height: 400px;
+    padding: 200px, 20px;
+    text-align: center;
+    border: 2px solid black;
+}
