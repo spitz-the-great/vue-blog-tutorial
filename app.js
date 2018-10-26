@@ -3,6 +3,14 @@ new Vue({
     data: {
 
         name: 'vue is linked correctly',
+    },
+
+    methods: {
+        greet: function(){
+            return 'sup ' + this.name
+        }
+           
+        
     }
 
 })
